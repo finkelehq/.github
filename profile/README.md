@@ -11,7 +11,7 @@
 
 Finkele helps organisations understand and adapt to climate risk through live tools:
 
-- 🚨 [**Flood Alert**](https://finkele.com/alert.html) — Live flood warnings across England & Scotland — ~3K stations, updated every 5 minutes via EA & SEPA.
+- 🚨 [**Flood Alert**](https://finkele.com/alert.html) — Live flood warnings across England & Scotland — ~3K stations, updated every 5 min via EA & SEPA.
 - 🗺️ [**Flood Risk Map**](https://finkele.com/floodmap.html) — Interactive flood depth maps with risk analysis and financial loss estimates.
 - 🌡️ [**Climate Dashboard**](https://finkele.com/climate.html) — ESG metrics, climate trends, and AI-driven risk predictions.
 - ⚡ **TERRA-emulator** — ML emulator for near-instant flood simulation, approximating
