@@ -1,12 +1,5 @@
 <p align="center">
-  <img src="assets/finkele-logo.png" width="120" alt="Finkele logo: a bird with green-striped wings">
-</p>
-
-<h1 align="center">Finkele</h1>
-
-<p align="center">
-  <strong>Climate intelligence for resilient assets.</strong><br>
-  Real-time flood alerts, flood risk mapping and financial loss estimation, so asset owners act before the next flood rather than after it.
+  <img src="assets/banner.png" alt="Finkele: flood prediction that states its own error. TERRA flood emulation and AXIOM surrogate validation.">
 </p>
 
 <p align="center">
@@ -15,36 +8,27 @@
   <a href="https://www.linkedin.com/company/finkele/"><img src="https://img.shields.io/badge/LinkedIn-Finkele-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Finkele on LinkedIn"></a>
 </p>
 
----
+We build flood prediction that tells you how far to trust it, and a protocol that holds any engineering ML surrogate to the same standard. Every number below is measured, and we publish the weaker figure beside the stronger one.
 
-## Live today
+## TERRA Predictor: flood depth in half a second
 
-| | Product | What it does |
-| :---: | --- | --- |
-| 🚨 | [**Flood Alert**](https://finkele.com/alert.html) | Live flood warnings for England and Scotland: about 3,000 stations, refreshed every 5 minutes from Environment Agency and SEPA data. |
-| 🗺️ | [**Flood Risk Map**](https://finkele.com/floodmap.html) | Flood depth across 10 to 500-year return periods, with risk and financial loss estimates per asset. |
-| 🌡️ | [**Climate Dashboard**](https://finkele.com/climate.html) | ESG metrics, climate trends and AI-driven risk predictions. |
+A machine-learning emulator trained on LISFLOOD-FP hydraulic simulations. One prediction takes **0.49 to 0.53 s** where the solver's median run takes **628 s**, roughly **1,200 times faster**, and it serves **23 UK catchments** today.
 
-## The technology underneath
+Every prediction comes with a conformal prediction interval. On a catchment the model never trained on, **94.6% of cells** fell inside the stated 95% band. That is a per-cell figure: measured per run, which is far stricter, it is **49.0%**. The interval is calibrated against the solver; comparison against observed floods comes next.
 
-| | Technology | What it does |
-| :---: | --- | --- |
-| ⚡ | **TERRA** | An ML flood emulator trained on real solver output: milliseconds instead of hours, with a calibrated confidence interval on every prediction. |
-| 🛰️ | **GroundVerify** | Checks flood predictions against what actually happened, using independent Sentinel-1 satellite radar of the real event rather than another model's opinion. |
-| 🧪 | **Axiom** | Our protocol for validating ML surrogates in engineering simulation: coverage guarantees, risk detection, and a handoff to the full solver whenever a prediction cannot be trusted. The test any surrogate has to pass. Open specification coming soon. |
+## AXIOM: the test any engineering surrogate has to pass
 
-## Recognition
+A protocol for validating ML surrogates that works with any solver and any architecture. It states where a surrogate can be trusted, with measured coverage and a bound on peak-region risk, and routes everything else back to the solver.
 
-- **Selected** for Accelerate Cambridge, Cambridge Judge Business School's startup accelerator
-- **Finalist**, Cleantech Company of the Year, Cambridge Independent Science & Technology Awards 2026
-- **Finalist**, HCR Impact55: one of 11 national finalists driving positive environmental change
+On held-in test data across four physics, the usual ±1.96σ intervals contained only **40 to 80%** of true values while claiming 95%; AXIOM's calibrated intervals contained **94.3 to 95.3%**. Version 1.2 runs unchanged across five physics, including five published NVIDIA models scored on NVIDIA's own held-out split. The open specification is coming soon.
 
-## Who it's for
+## Who we work with
 
-Water utilities, asset managers and infrastructure operators who need climate intelligence they can act on, not raw data.
+- **Owners of flood-exposed assets:** water utilities, infrastructure operators and asset managers who need to know which sites will flood, how deep the water will get, and how sure that answer is.
+- **Engineering simulation teams:** groups that train ML surrogates and need to show where a surrogate can be trusted before anyone relies on it.
 
-## Get in touch
+## Work with us
 
-Partnering, integrating our data, or seeing it on your own assets: [book a 20-minute demo](https://www.finkele.com/#contact) or write to us through [finkele.com](https://www.finkele.com).
+Want to see TERRA on your own sites, test a surrogate against AXIOM, or explore a partnership? [Book a 20-minute demo](https://www.finkele.com/#contact) or reach us at [finkele.com](https://www.finkele.com).
 
-<p align="center"><sub>Built in the United Kingdom · Building climate resilience, one data point at a time.</sub></p>
+<p align="center"><sub><strong>Recognised by</strong> Accelerate Cambridge (Cambridge Judge Business School) · Cambridge Independent Science &amp; Technology Awards 2026, Cleantech finalist · HCR Impact55 finalist</sub></p>
