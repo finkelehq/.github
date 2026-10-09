@@ -8,27 +8,61 @@
   <a href="https://www.linkedin.com/company/finkele/"><img src="https://img.shields.io/badge/LinkedIn-Finkele-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Finkele on LinkedIn"></a>
 </p>
 
-We build flood prediction that tells you how far to trust it, and a protocol that holds any engineering ML surrogate to the same standard. Every number below is measured, and we publish the weaker figure beside the stronger one.
+<p align="center"><strong>Flood prediction that tells you how far to trust it, and a protocol that holds any engineering ML surrogate to the same standard.</strong></p>
 
-## TERRA Predictor: flood depth in half a second
+<table align="center">
+  <tr>
+    <td align="center" width="25%"><h2>1,200×</h2>faster than the<br>LISFLOOD-FP solver<br><sub>0.5 s against 628 s</sub></td>
+    <td align="center" width="25%"><h2>94.6%</h2>of cells inside the<br>stated 95% band<br><sub>per cell · 49.0% per run</sub></td>
+    <td align="center" width="25%"><h2>23</h2>UK catchments<br>served today<br><sub>by the emulator</sub></td>
+    <td align="center" width="25%"><h2>5</h2>physics through one<br>validation protocol<br><sub>AXIOM v1.2</sub></td>
+  </tr>
+</table>
 
-A machine-learning emulator trained on LISFLOOD-FP hydraulic simulations. One prediction takes **0.49 to 0.53 s** where the solver's median run takes **628 s**, roughly **1,200 times faster**, and it serves **23 UK catchments** today.
+<p align="center"><sub>Every figure is measured. Where a stricter measure gives a weaker number, we publish it beside the stronger one.</sub></p>
 
-Every prediction comes with a conformal prediction interval. On a catchment the model never trained on, **94.6% of cells** fell inside the stated 95% band. That is a per-cell figure: measured per run, which is far stricter, it is **49.0%**. The interval is calibrated against the solver; comparison against observed floods comes next.
+## How it fits together
 
-## AXIOM: the test any engineering surrogate has to pass
+<p align="center">
+  <img src="assets/how-it-fits.png" alt="Solver runs train TERRA Predictor; the AXIOM gate tests each new model against the one it replaces before release; a model that fails is not promoted. The same protocol checks any engineering surrogate.">
+</p>
 
-A protocol for validating ML surrogates that works with any solver and any architecture. It states where a surrogate can be trusted, with measured coverage and a bound on peak-region risk, and routes everything else back to the solver.
+## What we build
 
-On held-in test data across four physics, the usual ±1.96σ intervals contained only **40 to 80%** of true values while claiming 95%; AXIOM's calibrated intervals contained **94.3 to 95.3%**. Version 1.2 runs unchanged across five physics, including five published NVIDIA models scored on NVIDIA's own held-out split. The open specification is coming soon.
+<table>
+  <tr>
+    <th width="50%">TERRA Predictor</th>
+    <th width="50%">AXIOM</th>
+  </tr>
+  <tr>
+    <td valign="top"><em>Flood depth in half a second</em>
+      <ul>
+        <li>Machine-learning emulator trained on LISFLOOD-FP hydraulic simulations</li>
+        <li>A conformal prediction interval with every prediction, calibrated against the solver</li>
+        <li>Comparison against observed floods comes next</li>
+      </ul>
+    </td>
+    <td valign="top"><em>The test any engineering surrogate has to pass</em>
+      <ul>
+        <li>Works with any solver and any model architecture</li>
+        <li>States where a surrogate can be trusted, and routes the rest to the solver</li>
+        <li>Usual ±1.96σ intervals held 40 to 80% of true values at a claimed 95%; AXIOM's held 94.3 to 95.3%</li>
+      </ul>
+      <sub>Open specification coming soon.</sub>
+    </td>
+  </tr>
+</table>
 
 ## Who we work with
 
-- **Owners of flood-exposed assets:** water utilities, infrastructure operators and asset managers who need to know which sites will flood, how deep the water will get, and how sure that answer is.
-- **Engineering simulation teams:** groups that train ML surrogates and need to show where a surrogate can be trusted before anyone relies on it.
+| | We answer |
+| --- | --- |
+| **Owners of flood-exposed assets**<br><sub>water utilities, infrastructure operators, asset managers</sub> | Which sites will flood, how deep, and how sure that answer is |
+| **Engineering simulation teams**<br><sub>groups that train ML surrogates</sub> | Where a surrogate can be trusted before anyone relies on it |
 
-## Work with us
-
-Want to see TERRA on your own sites, test a surrogate against AXIOM, or explore a partnership? [Book a 20-minute demo](https://www.finkele.com/#contact) or reach us at [finkele.com](https://www.finkele.com).
+<p align="center">
+  <strong>See TERRA on your sites, test a surrogate against AXIOM, or partner with us:</strong><br>
+  <a href="https://www.finkele.com/#contact">book a 20-minute demo</a> · <a href="https://www.finkele.com">finkele.com</a>
+</p>
 
 <p align="center"><sub><strong>Recognised by</strong> Accelerate Cambridge (Cambridge Judge Business School) · Cambridge Independent Science &amp; Technology Awards 2026, Cleantech finalist · HCR Impact55 finalist</sub></p>
